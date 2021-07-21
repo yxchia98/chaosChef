@@ -103,12 +103,12 @@ while [ -n "$1" ]; do # while loop starts
     shift
     shift;;
 
-  -netdrops)
-    # echo "Loading Network Packet Dropper"
-    # echo "-net $2 $3"
-    parameters+="-netdrops $2 $3 "
-    shift
-    shift;;
+  # -netdrops)
+  #   # echo "Loading Network Packet Dropper"
+  #   # echo "-net $2 $3"
+  #   parameters+="-netdrops $2 $3 "
+  #   shift
+  #   shift;;
 
   -netlimit)
     # echo "Loading Network Throttler"
@@ -117,22 +117,26 @@ while [ -n "$1" ]; do # while loop starts
     shift
     shift;;
 
-  -netlimits)
-    # echo "Loading Network Throttler"
-    # echo "-net $2 $3"
-    parameters+="-netlimits $2 $3 "
-    shift
-    shift;;
+  # -netlimits)
+  #   # echo "Loading Network Throttler"
+  #   # echo "-net $2 $3"
+  #   parameters+="-netlimits $2 $3 "
+  #   shift
+  #   shift;;
 
   -reboot)
     # echo "Loading Machine Reboot"
     parameters+="-reboot $2"
     shift;;
 
-  -reboots)
-    # echo "Loading Machine Reboot"
-    parameters+="-reboots $2"
-    shift;;
+  # -reboots)
+  #   # echo "Loading Machine Reboot"
+  #   parameters+="-reboots $2"
+  #   shift;;
+  
+  -seconds)
+    parameters+="-seconds"
+    ;;
 
   *)
     echo "Option $1 not recognized"
