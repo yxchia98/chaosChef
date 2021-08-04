@@ -1,0 +1,9 @@
+{
+    "type": "reboot",
+    "duration": "0",
+    "jvm_parameters": "-XX:MaxRAMPercentage=100 -jar",
+    "jrepath_windows": "C:\\Users\\Administrator\\jdk-11.0.11+9-jre\\bin\\java.exe",
+    "jrepath_linux": "/root/jdk-11.0.11+9-jre/bin/java",
+    "id": "reboot",
+    "description": "details for executing Javoc.jar to reboot local machine"
+}

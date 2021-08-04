@@ -19,7 +19,7 @@ if platform?('redhat')
 	# 		notifies :delete, "cookbook_file[#{ENV['HOME']}/openjdk-16.0.1_linux-x64_bin.tar.gz]"
 	# 	end
 	# end
-elsif platform?('windows')
+else
 	cookbook_file "#{ENV['HOME']}/Javoc.jar" do
 	  source 'Javoc.jar'
 	  action :create
@@ -51,6 +51,5 @@ elsif platform?('windows')
 	# 		notifies :delete, "cookbook_file[#{ENV['HOME']}/openjdk-16.0.1_windows-x64_bin.zip]"
 	# 	end
 	# end
-else
 end
 

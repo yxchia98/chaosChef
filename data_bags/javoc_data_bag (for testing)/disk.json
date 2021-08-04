@@ -1,0 +1,10 @@
+{
+    "type": "disk",
+    "utilization_level": ["50", "75", "90"],
+    "duration": ["1", "5"],
+    "jvm_parameters": "-XX:MaxRAMPercentage=100 -jar",
+    "jrepath_windows": "C:\\Users\\Administrator\\jdk-11.0.11+9-jre\\bin\\java.exe",
+    "jrepath_linux": "/root/jdk-11.0.11+9-jre/bin/java",
+    "id": "disk",
+    "description": "details for executing Javoc.jar to load Disk"
+}

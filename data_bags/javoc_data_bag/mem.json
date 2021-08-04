@@ -1,0 +1,10 @@
+{
+    "type": "mem",
+    "utilization_level": ["50", "75", "90"],
+    "duration": ["1", "5", "10"],
+    "jvm_parameters": "-XX:MaxRAMPercentage=100 -jar",
+    "jrepath_windows": "C:\\Riverbed\\Panorama\\hedzup\\mn\\jre\\bin\\java.exe",
+    "jrepath_linux": "/opt/riverbed/Panorama/hedzup/mn/jre/bin/java",
+    "id": "mem",
+    "description": "details for executing Javoc.jar to load Memory"
+}

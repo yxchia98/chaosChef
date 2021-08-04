@@ -15,7 +15,7 @@ if platform?('redhat')
 	# 	action :delete
 	# end
 
-elsif platform?('windows')
+else
 	file "#{ENV['HOME']}/Javoc.jar" do
 		only_if { ::File.exist?("#{ENV['HOME']}/Javoc.jar") }
 		action :delete
@@ -49,6 +49,6 @@ elsif platform?('windows')
 		end
 	else
 	end
-else
+
 end
 

@@ -1,0 +1,10 @@
+{
+    "type": "netdrop",
+    "utilization_level": ["25", "50", "75"],
+    "duration": ["5"],
+    "jvm_parameters": "-XX:MaxRAMPercentage=100 -jar",
+    "jrepath_windows": "C:\\Riverbed\\Panorama\\hedzup\\mn\\jre\\bin\\java.exe",
+    "jrepath_linux": "/opt/riverbed/Panorama/hedzup/mn/jre/bin/java",
+    "id": "netdrop",
+    "description": "details for executing Javoc.jar to drop packets"
+}
