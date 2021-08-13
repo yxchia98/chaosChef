@@ -1,10 +1,11 @@
 bagitem = data_bag_item('javoc_data_bag', 'netlag')
+validator = data_bag_item('javoc_data_bag', 'validator')
 bagitem['utilization_level'].each do |n|
 	if platform?('redhat')
 		execute "Network packet delay at #{n}ms for #{bagitem['duration'].at(0)}mins (redhat)" do
 			command <<-EOS
 			cd #{ENV['HOME']}
-			#{bagitem['jrepath_linux']} #{bagitem['jvm_parameters']} Javoc.jar #{"-" + bagitem['type']} #{bagitem['duration'].at(0)} #{n} #{bagitem['validate_service_linux'] == "" ? "" : "-service " + bagitem['validate_service_linux']} #{bagitem['validate_url'] == "" ? "" : "-url " + bagitem['validate_url']} -seconds
+			#{bagitem['jrepath_linux']} #{bagitem['jvm_parameters']} Javoc.jar #{"-" + bagitem['type']} #{bagitem['duration'].at(0)} #{n} #{validator['validate_service_linux'] == "" ? "" : "-service " + validator['validate_service_linux']} #{validator['validate_url'] == "" ? "" : "-url " + validator['validate_url']} -seconds
 			EOS
 		end
 		log "after test log" do
@@ -19,7 +20,7 @@ bagitem['utilization_level'].each do |n|
 		powershell_script "Network packet delay at #{n}ms for #{bagitem['duration'].at(0)}mins (windows)" do
 			code <<-EOS
 			cd #{ENV['HOME']}
-			#{bagitem['jrepath_windows']} #{bagitem['jvm_parameters']} Javoc.jar #{"-" + bagitem['type']} #{bagitem['duration'].at(0)} #{n} #{bagitem['validate_service_windows'] == "" ? "" : "-service " + bagitem['validate_service_windows']} #{bagitem['validate_url'] == "" ? "" : "-url " + bagitem['validate_url']} -seconds
+			#{bagitem['jrepath_windows']} #{bagitem['jvm_parameters']} Javoc.jar #{"-" + bagitem['type']} #{bagitem['duration'].at(0)} #{n} #{validator['validate_service_windows'] == "" ? "" : "-service " + validator['validate_service_windows']} #{validator['validate_url'] == "" ? "" : "-url " + validator['validate_url']} -seconds
 			EOS
 		end
 		log "after test log" do
