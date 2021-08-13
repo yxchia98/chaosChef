@@ -1,0 +1,7 @@
+{
+    "validate_service_linux": "",
+    "validate_service_windows": "",
+    "validate_url": "",
+    "id": "validator",
+    "description": "details for verification of steady state hypothesis"
+}
