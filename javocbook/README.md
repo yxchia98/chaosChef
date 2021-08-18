@@ -106,8 +106,8 @@
 <p>The data bag items used will be documented in the table below, with the common properties being:</p>
 
 <p>JVM Parameters: -XX:MaxRAMPercentage=100 -jar <br>
-Windows JRE path: C:\Riverbed\Panorama\hedzup\mn\jre\bin\java.exe <br>
-Linux JRE path: /opt/riverbed/Panorama/hedzup/mn/jre/bin/java</p>
+Windows JRE path: &lt redacted &gt <br>
+Linux JRE path: &lt redacted &gt </p>
 
 <table>
     <tr>
