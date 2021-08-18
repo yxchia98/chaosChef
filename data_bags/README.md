@@ -5,7 +5,7 @@
 <p>The data bag items used will be documented in the table below, with the common properties being:</p>
 
 <p>JVM Parameters: -XX:MaxRAMPercentage=100 -jar <br>
-Windows JRE path: &l tredacted &gt <br>
+Windows JRE path: &lt tredacted &gt <br>
 Linux JRE path: &lt redacted &gt</p>
 
 <table>
